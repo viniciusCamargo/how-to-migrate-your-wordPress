@@ -5,7 +5,8 @@ For this tutorial I'll use [WP Migrate DP](https://wordpress.org/plugins/wp-migr
 **Note**: While developing your theme, try to use relative paths for your images. WP will set the path for your image to an absolute path e.g. `http://dev.yourproject.com/wp-content/uploads/2016/03/your-image.png`, shrink that to only `/wp-content/uploads/2016/03/your-image.png` and you'll avoid future reworking since neither WP Migrate DB or your editions to the functions file will change the path of the images.
 
 The process is quite straightforward:
-1. After installing the plugin head to its configuration at `Tools > Migrate DB` and fill the address and path of your current project and the equivalent information for the destination:
+
+1. After installing the plugin head over to its configuration at `Tools > Migrate DB` and fill the address and path of your current project and the equivalent information for the destination:
 ```
 Find                                       Replace
 //dev.yourproject.com                      yourproject.com
@@ -28,4 +29,4 @@ Now your development environment will stop working but we will fix this in a sec
 
 Everything **should** be working at your production environment by now. Check for 404s because you'll likely have some, mainly images you forgot to set a relative path.
 
-Back to your development site open you wp-config file again and set `WP_HOME` and `WP_SITEURL` to its former location e.g. `http://dev.yourproject.com`. Refresh dev.yourproject.com a few times and everything should be functioning again. That's all folks!
+5. Back to your development site open you wp-config file again and set `WP_HOME` and `WP_SITEURL` to its former location e.g. `http://dev.yourproject.com`. Refresh dev.yourproject.com a few times and everything should be functioning again. That's all folks!
